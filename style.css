@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 html,
 body {
+    scroll-behavior: smooth;
     height: 100%;
     width: 100%;
     font-family: 'Poppins', sans-serif;
@@ -8,11 +10,15 @@ body {
 }
 
 .navbar a {
-    color: #003366!important;
+    color: #000039!important;
+}
+
+.navbar a:hover {
+    color: #8b0000!important;
 }
 
 .navbar-toggler {
-    border-color: #003366!important;
+    border-color: #000039!important;
 }
 
 .navbar-toggler-icon {
@@ -24,26 +30,26 @@ body {
 }
 
 .carousel-inner img {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 #carouselExampleIndicators {
     margin-bottom: 3rem;
 }
 
-.a-propos img {
+#a-propos #body {
+    font-family: Roboto, sans-serif;
+}
+
+#a-propos img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.produits .card:hover,
+#produits .card:hover,
 .maps .card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: box-shadow 0.3s ease-in-out;
-}
-
-.margin-bottom {
-    margin-bottom: 3rem;
 }
 
 #mapid,
@@ -51,14 +57,31 @@ body {
     height: 600px;
 }
 
-.padding-top-bottom {
-    padding: 2rem 0;
+#contacter form {
+    font-family: Roboto, sans-serif;
+}
+
+#contacter button {
+    background-color: #000039;
+}
+
+#contacter button:hover {
+    background-color: #8b0000;
 }
 
 footer {
     background-color: #3f3f3f;
     color: #d5d5d5;
     padding-top: 2rem;
+}
+
+.quick-links a {
+    color: #000039;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #8b0000;
 }
 
 
@@ -90,40 +113,6 @@ footer {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
-}
-
-
-/*--- Fixed Background Image --*/
-
-figure {
-    position: relative;
-    width: 100%;
-    height: 60%;
-    margin: 0!important;
-}
-
-.fixed-wrap {
-    clip: rect(0, auto, auto, 0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-#fixed {
-    background-image: url('img/mac.png');
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    will-change: transform;
 }
 
 

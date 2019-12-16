@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(document).on('ready', function() {
-        $('.products').slick({
+        $('#elements').slick({
             centerMode: true,
             centerPadding: '60px',
             slidesToShow: 3,

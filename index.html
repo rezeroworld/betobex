@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -27,16 +28,19 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a href="#" class="nav-link text-primary">Acceuil</a>
+                        <a href="#" class="nav-link text-primary mr-3">Acceuil</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Entreprise</a>
+                        <a href="#a-propos" class="nav-link mr-3">A Propos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Nous Contacter</a>
+                        <a href="#produits" class="nav-link mr-3">Produits</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Nous Trouver</a>
+                        <a href="#adresse" class="nav-link mr-3">Adresse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacter" class="nav-link mr-3">Communiquer avec Nous</a>
                     </li>
                 </ul>
             </div>
@@ -87,32 +91,35 @@
 
     <!--A propos-->
 
-    <div class="container-fluid margin-bottom a-propos">
+    <div class="container mb-5" id="a-propos">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6 ">
                 <div class="container">
                     <h2 class="display-4">A Propos de BETOBEX</h2>
                     <br>
-                    <p class="lead">BETOBEX est une société Algerienne qui domine le marché des produits en beton depuis plus d'une decenie grace à notre expertise et à nos technologies.</p>
-                    <br>
-                    <p class="lead">Notre siege sociale se trouve à 44 Z.I. NEDJMA 4 Sidi Chami Oran, Algérie. Nous venons dernierement d'ouvrir un nouveau site d'activité à El Hamoul, Oran. Plus de details en bas...
-                    </p>
+                    <div id="body">
+                        <p class="lead">BETOBEX est une société Algerienne qui domine le marché des produits en beton depuis plus d'une decenie grace à notre expertise et à nos technologies.</p>
+                        <br>
+                        <p class="lead">Notre siege sociale se trouve à 44 Z.I. NEDJMA 4 Sidi Chami Oran, Algérie. Nous venons dernierement d'ouvrir un nouveau site d'activité à El Hamoul, Oran. Plus de details en bas...
+                        </p>
+                    </div>
                 </div>
-
             </div>
-            <div class="col-12 col-md-6 d-flex justify-content-center">
-                <img src="imgs/IMG_3046.jpg" class="rounded" width="80%">
+            <div class="col-12 col-lg-6 d-flex justify-content-center">
+                <div>
+                    <img src="imgs/IMG_3046.jpg" class="rounded" width="100%">
+                </div>
             </div>
         </div>
     </div>
 
     <!--Nos produits-->
 
-    <div class="container col-12 bg-light margin-bottom produits">
+    <div class=" container-fluid bg-light mb-5" id="produits">
         <div class="container d-flex justify-content-center">
             <h1 class="display-4">Nos Produits</h1>
         </div>
-        <div class="products center slider">
+        <div id="elements" class="center slider pb-5">
             <div class="card ml-3 mr-3 mt-3 mb-3">
                 <img src="imgs/IMG_3066.jpg" class="card-img-top">
                 <div class="card-body bg-light">
@@ -146,21 +153,21 @@
         </div>
     </div>
 
-    <!--Maps-->
+    <!--Adresse-->
 
-    <div class="container d-flex justify-content-center">
+    <div id="adresse" class="container d-flex justify-content-center mb-5">
         <h1 class="display-4 center">Adresse</h1>
     </div>
-    <div class="container maps">
+    <div class="container-fluid maps">
         <div class="row">
-            <div class="col-12 col-md-5 mx-auto card margin-bottom">
+            <div class="col-12 col-md-5 mx-auto card mb-5">
                 <div class="card-body">
                     <p class="card-text">44 Z.I. NEDJMA 4 Sidi Chami Oran(31), Algérie, 31000</p>
                 </div>
                 <div class="card-img-top" id="mapid">
                 </div>
             </div>
-            <div class="col-12 col-md-5 mx-auto card margin-bottom">
+            <div class="col-12 col-md-5 mx-auto card mb-5">
                 <div class="card-body">
                     <p class="card-text">Bientot annoncé.</p>
                 </div>
@@ -172,14 +179,14 @@
 
     <!--Vous avez une question ?-->
 
-    <div class="container-fluid bg-light padding-top-bottom">
-        <div class="container d-flex justify-content-center">
-            <h1 class="display-4">Une question ? N'hesitez pas à nous Contacter</h1>
+    <div class="container-fluid bg-light pt-5 pb-5" id="contacter">
+        <div class="container d-flex justify-content-center pb-5">
+            <h1 class="display-4">Vous souhaitez communiquer avec Nous ? N'hesitez pas à nous Contacter</h1>
         </div>
         <form class="container">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Votre Adresse E-mail</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input id="mail" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Votre Numero de Telephone</label>
@@ -198,9 +205,9 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Votre question</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea id="message" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">ENVOYER MAINTENANT</button>
+            <button onclick="send_mail()" type="submit" class="btn btn-primary">ENVOYER MAINTENANT</button>
             <p class="h6 text-muted mt-3">Les champs obligatoires sont indiqués avec *</p>
         </form>
     </div>
@@ -218,26 +225,26 @@
                     <p>44 Z.I. NEDJMA 4 Sidi Chami</p>
                     <p>Oran(31), Algérie, 31000</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 quick-links">
                     <hr class="light">
                     <h5>LIENS RAPIDES</h5>
                     <hr class="light">
-                    <a href="#">Produits</a>
+                    <a href="#produits">Produits</a>
                     <br>
                     <br>
-                    <a href="#">Contact</a>
+                    <a href="#contacter">Communiquer avec Nous</a>
                 </div>
                 <div class="col-md-4">
                     <hr class="light">
                     <h5>REJOIGNEZ NOUS</h5>
                     <hr class="light">
                     <div class="col-12 social padding">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/BetobexOran/" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
                     </div>
                 </div>
                 <div class="col-12">
                     <hr class="light-100">
-                    <p class="text-muted">Copyright 2019 &copy; Betobex.com - Tous droits réservés. Siteweb réalisé par le service de developement web de Betobex.</p>
+                    <p class="text-white">Copyright 2019 &copy; Betobex.com - Tous droits réservés. Siteweb réalisé par le service de developement web de Betobex.</p>
                 </div>
             </div>
         </div>
@@ -247,10 +254,11 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js "></script>
+    <script src="https://kit.fontawesome.com/7c7d83cb60.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="script.js"></script>
     <script src="script2.js"></script>
+    <script src="script3.js"></script>
 
 </body>
 
