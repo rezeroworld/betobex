@@ -3,10 +3,9 @@
 html,
 body {
     scroll-behavior: smooth;
-    height: 100%;
-    width: 100%;
     font-family: 'Poppins', sans-serif;
     color: #222;
+    overflow-x: hidden;
 }
 
 .navbar a {
@@ -29,9 +28,23 @@ body {
     width: 150px;
 }
 
+.carousel-item {
+    font-family: Roboto, sans-serif;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .carousel-inner img {
-    height: 100%;
-    width: 100%;
+    max-height: 580px;
+    object-fit: cover;
 }
 
 #carouselExampleIndicators {
@@ -76,12 +89,12 @@ footer {
 }
 
 .quick-links a {
-    color: #000039;
+    color: #d5d5d5;
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #8b0000;
+    color: #000039;
 }
 
 
